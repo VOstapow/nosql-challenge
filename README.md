@@ -1,7 +1,8 @@
 # NoSQL databases 
 
-<img src="https://toppng.com/public/uploads/preview/9kib-354x415-unnamed-mongodb-logo-sv-11562860723mgempnmrq3.png" width="600" />
-<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kouceylahadji-1/images/174949/json_logo-555px__1_.png" width="600" />
+<img src="https://toppng.com/public/uploads/preview/9kib-354x415-unnamed-mongodb-logo-sv-11562860723mgempnmrq3.png" width="200" />
+
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kouceylahadji-1/images/174949/json_logo-555px__1_.png" width="200" />
 
 ## Instructions
 
@@ -12,27 +13,35 @@ The **UK Food Standards Agency** evaluates various establishments across the Uni
 Use **NoSQL_setup_starter.ipynb** for this section of the project.
 
 1️⃣ Import the data provided in the establishments.json file from your Terminal. Name the database uk_food and the collection establishments. 
+
 2️⃣ Copy the text you used to import your data from your Terminal to a markdown cell in your notebook. 
+
 3️⃣ Within your notebook, import the libraries you need: PyMongo and Pretty Print (pprint). 
+
 4️⃣ Create an instance of the Mongo Client. Confirm that you created the database and loaded the data properly:
-    ✅ List the databases you have in MongoDB. Confirm that uk_food is listed.
-    ✅ List the collection(s) in the database to ensure that establishments is there.
-    ✅ Find and display one document in the establishments collection using find_one and display with pprint.
+
+    ✅  List the databases you have in MongoDB. Confirm that uk_food is listed.
+    ✅  List the collection(s) in the database to ensure that establishments is there.
+    ✅  Find and display one document in the establishments collection using find_one and display with pprint.
+
 5️⃣ Assign the establishments collection to a variable to prepare the collection for use.
 
 ### Part 2: Update the Database
 
-Use ***NoSQL_setup_starter.ipynb** for this section of the project.
+Use ***NoSQL_setup_starter.ipynb** for this section of the project. 
 
 The magazine editors have some requested modifications for the database before you can perform any queries or analysis for them. Make the following changes to the establishments collection:
 
-1️⃣ An exciting new halal restaurant just opened in Greenwich, but hasn't been rated yet.The magazine has asked you to include it in your   analysis. Add the following information to the database:
+1️⃣ An exciting new halal restaurant just opened in Greenwich, but hasn't been rated yet. The magazine has asked you to include it in your analysis. Add the following information to the database:
 
-<img src="Resources\restaurantdata.jpg" width="600" />
+<img src="Resources\restaurantdata.jpg" width="400" />
 
 2️⃣ Find the **BusinessTypeID** for "Restaurant/Cafe/Canteen" and return only the **BusinessTypeID** and **BusinessType** fields.
+
 3️⃣ Update the new restaurant with the **BusinessTypeID** you found.
+
 4️⃣ The magazine is not interested in any establishments in ***Dover***, so check how many documents contain the Dover Local Authority. Then, remove any establishments within the Dover Local Authority from the database, and check the number of documents to ensure they were deleted.
+
 5️⃣ Some of the number values are stored as strings, when they should be stored as numbers. Use **update_many** to convert **latitude** and **longitude** to decimal numbers.
 
 
@@ -46,11 +55,13 @@ Some notes to be aware of while you are exploring the dataset:
 
 ✅ The scores for Hygiene, Structural, and ConfidenceInManagement work in reverse. This means, the higher the value, the worse the establishment is in these areas.
 
-Use the following questions to explore the database, and find the answers, so you can provide them to the magazine editors.
+✅ Use the following questions to explore the database, and find the answers, so you can provide them to the magazine editors.
 Unless otherwise stated, for each question:
 
 ✅ Use count_documents to display the number of documents contained in the result.
+
 ✅ Display the first document in the results using pprint.
+
 ✅Convert the result to a Pandas DataFrame, print the number of rows in the DataFrame, and display the first 10 rows.
 
     1️⃣Which establishments have a hygiene score equal to 20?
@@ -63,4 +74,4 @@ Unless otherwise stated, for each question:
 
 The first 5 rows of your resulting DataFrame should look something like this:
 
-<img src="Resources\analysis.jpg" width="600" />
+<img src="Resources\analysis.jpg" width="200" />
